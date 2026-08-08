@@ -226,6 +226,23 @@
   }
   .proof-text h3{font-size:1.5rem;color:var(--paper);margin-bottom:16px;}
   .proof-text p{color:var(--muted);margin-bottom:16px;font-size:1rem;}
+  .carousel-wrap{max-width:460px;margin:0 auto;}
+  .carousel-track{
+    display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;border-radius:16px;
+    border:1px solid var(--line);background:var(--steel);
+    box-shadow:0 30px 60px -24px rgba(0,0,0,.6);
+    scrollbar-width:none;
+  }
+  .carousel-track::-webkit-scrollbar{display:none;}
+  .carousel-slide{flex:0 0 100%;scroll-snap-align:center;padding:14px;}
+  .carousel-slide img{width:100%;display:block;border-radius:10px;}
+  .carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:18px;}
+  .carousel-dot{
+    width:9px;height:9px;border-radius:50%;background:var(--line);
+    cursor:pointer;transition:background .25s,transform .25s;
+  }
+  .carousel-dot.active{background:var(--gold);transform:scale(1.2);}
   .reach-row{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap;}
   .reach-item{font-family:'Oswald',sans-serif;}
   .reach-num{font-size:2rem;color:var(--gold-2);font-weight:600;display:block;}
@@ -451,6 +468,30 @@
   </div>
 </section>
 
+<section class="band band-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Resultado real</span>
+      <h2>Evolução da aluna Laura Fernandes.</h2>
+      <p>Arraste para o lado para ver a evolução completa da Laura na consultoria online, como num carrossel de Instagram.</p>
+    </div>
+    <div class="carousel-wrap reveal">
+      <div class="carousel-track" id="lauraCarousel">
+        <div class="carousel-slide">
+          <img src="1.png" alt="Evolução Laura Fernandes - antes e depois 1" loading="lazy">
+        </div>
+        <div class="carousel-slide">
+          <img src="2.png" alt="Evolução Laura Fernandes - antes e depois 2" loading="lazy">
+        </div>
+      </div>
+      <div class="carousel-dots" id="lauraDots">
+        <span class="carousel-dot active" data-i="0"></span>
+        <span class="carousel-dot" data-i="1"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="band">
   <div class="wrap">
     <div class="section-head reveal">
@@ -610,6 +651,27 @@
     revealEls.forEach(el=>io.observe(el));
   } else {
     revealEls.forEach(el=>el.classList.add('in'));
+  }
+
+  // Laura Fernandes carousel (swipe + dots)
+  const lauraTrack = document.getElementById('lauraCarousel');
+  const lauraDots = document.querySelectorAll('#lauraDots .carousel-dot');
+  if(lauraTrack && lauraDots.length){
+    lauraDots.forEach(dot=>{
+      dot.addEventListener('click', ()=>{
+        const i = parseInt(dot.dataset.i, 10);
+        lauraTrack.scrollTo({ left: i * lauraTrack.clientWidth, behavior: 'smooth' });
+      });
+    });
+    let scrollTimeout;
+    lauraTrack.addEventListener('scroll', ()=>{
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(()=>{
+        const idx = Math.round(lauraTrack.scrollLeft / lauraTrack.clientWidth);
+        lauraDots.forEach(d=>d.classList.remove('active'));
+        if(lauraDots[idx]) lauraDots[idx].classList.add('active');
+      }, 80);
+    });
   }
 </script>
 
