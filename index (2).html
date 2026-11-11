@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sérgio Souza — Personal Trainer & Consultoria Online | RJ</title>
+<meta name="description" content="Personal trainer em Mangaratiba (RJ) e consultoria online Squad Souzza. Treino com método, biomecânica e acompanhamento direto. CREF 060093/RJ.">
+<meta property="og:title" content="Squad Souzza — Consultoria Online | Sérgio Souza">
+<meta property="og:description" content="Treino presencial ou consultoria online com personal registrado no CREF. Veja planos e valores.">
+<meta property="og:image" content="logo.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--bg2:#0d0d0d;--line:#2a2314;--gold:#e8b923;--gold2:#b98a0e;--silver:#e6e6e8;--mute:#a8a8ad;--wa:#25d366}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--silver);font:400 17px/1.6 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+section{padding:72px 0}
+h1,h2,h3,.display{font-family:'Barlow Condensed',Impact,sans-serif;font-style:italic;font-weight:800;line-height:1.02;letter-spacing:.01em}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin-bottom:14px}
+h3{font-size:1.5rem;margin-bottom:8px}
+.lead{color:var(--mute);max-width:60ch}
+.gold{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 26px;border-radius:6px;font:700 1.15rem 'Barlow Condensed',sans-serif;font-style:italic;text-decoration:none;transition:transform .15s,background .15s}
+.btn-gold{background:linear-gradient(180deg,#f3cb4a,var(--gold2));color:#000}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-line{border:2px solid var(--gold);color:var(--gold)}
+.btn-line:hover{background:rgba(232,185,35,.1)}
+/* topo */
+header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+header img{height:46px;width:auto;transition:opacity .25s,visibility .25s}
+header.top img{opacity:0;visibility:hidden}
+.who{font:700 1.2rem 'Barlow Condensed',sans-serif;font-style:italic;color:var(--gold);letter-spacing:.04em}
+header .btn{min-height:42px;padding:6px 18px;font-size:1rem;background:var(--wa);color:#000}
+/* hero */
+.hero{padding:40px 0 64px;text-align:center;background:radial-gradient(60% 50% at 50% 28%,rgba(232,185,35,.16),transparent 70%)}
+.hero .logo{width:min(560px,92%);margin:0 auto 6px}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);margin:10px 0 14px}
+.hero p{color:var(--mute);max-width:56ch;margin:0 auto 26px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.alert{display:inline-block;margin-top:24px;padding:8px 16px;border:1px solid var(--gold2);border-radius:99px;color:var(--gold);font-size:.95rem;text-decoration:none}
+.stats{display:flex;justify-content:center;gap:clamp(18px,5vw,56px);flex-wrap:wrap;margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+.stats b{display:block;font:800 2.2rem 'Barlow Condensed',sans-serif;font-style:italic;color:var(--gold)}
+.stats span{color:var(--mute);font-size:.95rem}
+/* sobre */
+.about{display:grid;gap:36px;align-items:center}
+.about .photo{border-radius:10px;border:1px solid var(--gold2);overflow:hidden;background:var(--bg2);min-height:0}
+.about .photo img{width:100%;height:auto}
+dl{margin-top:22px;border-top:1px solid var(--line)}
+dl div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+dt{color:var(--gold);font-weight:600}
+@media(min-width:820px){.about{grid-template-columns:.8fr 1.2fr}}
+/* resultados */
+.results{background:var(--bg2)}
+.case{display:grid;gap:24px;margin-top:40px;align-items:start}
+.case figure{display:grid;gap:12px}
+.case.two figure{grid-template-columns:1fr 1fr}
+.case img{border-radius:8px;border:1px solid var(--line);width:100%;height:auto}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tags li{list-style:none;padding:5px 12px;border:1px solid var(--line);border-radius:99px;font-size:.9rem;color:var(--mute)}
+.tags b{color:var(--gold);font-weight:600}
+@media(min-width:820px){.case{grid-template-columns:1fr 1fr}}
+/* mitos */
+.myths{display:grid;gap:16px;margin-top:32px}
+.myth{padding:22px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--bg2)}
+.myth small{color:var(--gold);font-weight:600}
+.myth h3{font-size:1.4rem;margin:4px 0 6px}
+.myth p{color:var(--mute);font-size:.98rem}
+@media(min-width:720px){.myths{grid-template-columns:1fr 1fr}}
+/* planos */
+.plans{background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 22px}
+.tabs button{flex:1 1 auto;min-height:48px;padding:8px 18px;border:2px solid var(--line);border-radius:6px;background:none;color:var(--silver);font:700 1.1rem 'Barlow Condensed',sans-serif;font-style:italic;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--gold);border-color:var(--gold);color:#000}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.plan{display:flex;flex-direction:column;gap:6px;padding:24px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.plan.best{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 10px 40px rgba(232,185,35,.12)}
+.plan .n{font:800 1.5rem 'Barlow Condensed',sans-serif;font-style:italic}
+.plan .p{font:800 2.6rem/1 'Barlow Condensed',sans-serif;font-style:italic;color:var(--gold)}
+.plan .p small{font-size:1rem;color:var(--mute);font-weight:700}
+.plan .d{color:var(--mute);font-size:.95rem;min-height:1.5em}
+.plan .btn{margin-top:auto;min-height:46px;font-size:1.05rem}
+.note{margin-top:14px;color:var(--mute);font-size:.92rem}
+[hidden]{display:none!important}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;list-style:none;padding:16px 36px 16px 0;font-weight:600;position:relative;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';position:absolute;right:4px;top:12px;font-size:1.6rem;color:var(--gold);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);padding:0 0 18px;max-width:64ch}
+/* fim */
+.final{text-align:center;background:radial-gradient(50% 70% at 50% 100%,rgba(232,185,35,.18),transparent 70%)}
+.final h2{font-size:clamp(2.2rem,7vw,4rem)}
+.final p{color:var(--mute);margin:0 auto 24px;max-width:48ch}
+footer{border-top:1px solid var(--line);padding:32px 0 96px;text-align:center;color:var(--mute);font-size:.92rem}
+footer img{height:56px;margin:0 auto 12px}
+footer nav{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+footer nav a{color:var(--gold)}
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 6px 24px rgba(0,0,0,.6)}
+.fab svg{width:30px;height:30px;fill:#000}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#topo" aria-label="Squad Souzza — início"><img src="logo.png" alt="Squad Souzza Consultoria Online"></a>
+    <a class="btn" href="https://wa.me/5521982733914?text=Oi%20S%C3%A9rgio!%20Vim%20pelo%20Instagram%20e%20quero%20saber%20mais%20sobre%20os%20planos.">WhatsApp</a>
+  </div>
+</header>
+
+<main id="topo">
+<section class="hero">
+  <div class="wrap">
+    <img class="logo" src="logo.png" alt="Squad Souzza Consultoria Online" width="1672" height="941" fetchpriority="high">
+    <p class="who">Sérgio Souza · Personal Trainer · CREF 060093/RJ</p>
+    <h1>Seja seu <span class="gold">eu do futuro</span></h1>
+    <p>Treino presencial ou consultoria online com um personal formado, registrado no CREF e com mais de 10 anos de academia e de quadra. Foco, disciplina e resultado sem achismo.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://wa.me/5521982733914?text=Oi%20S%C3%A9rgio!%20Vim%20pelo%20Instagram%20e%20quero%20come%C3%A7ar%20a%20treinar.">Quero treinar com o Sérgio</a>
+      <a class="btn btn-line" href="#planos">Ver planos e valores</a>
+    </div>
+    <a class="alert" href="https://wa.me/5521982733914?text=Oi%20S%C3%A9rgio!%20Quero%20garantir%20minha%20vaga%20na%20consultoria%20online.">Vagas limitadas para a consultoria online neste mês. Garantir minha vaga</a>
+    <div class="stats">
+      <div><b>10+</b><span>anos de experiência</span></div>
+      <div><b>CREF 060093/RJ</b><span>profissional registrado</span></div>
+      <div><b>Desde 2023</b><span>projeto social de basquete</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap about">
+    <div class="photo">
+      <!-- Troque "sergio.jpg" pelo nome da sua foto no repositório -->
+      <img src="sergio.jpg" alt="Sérgio Souza, personal trainer" loading="lazy" onerror="this.closest('.photo').hidden=true">
+    </div>
+    <div>
+      <h2>Não é só motivação. É método.</h2>
+      <p class="lead">Cada treino é montado em cima de biomecânica, fisiologia do esporte e anos de prática de quadra e academia, e não em achismo de internet.</p>
+      <dl>
+        <div><dt>Formação</dt><dd>Bacharel em Educação Física</dd></div>
+        <div><dt>Especialização</dt><dd>Pós-graduando em Biomecânica e Fisiologia do Esporte</dd></div>
+        <div><dt>Especialização</dt><dd>Pós-graduando em Basquetebol</dd></div>
+        <div><dt>Registro</dt><dd>CREF 060093/RJ</dd></div>
+        <div><dt>Experiência</dt><dd>Mais de 10 anos de vivência prática em musculação</dd></div>
+        <div><dt>Atuação social</dt><dd>Professor de Projeto Social de Basquete desde 2023</dd></div>
+        <div><dt>Público</dt><dd>Atletas e praticantes de todos os níveis</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="results" id="resultados">
+  <div class="wrap">
+    <h2>Resultados reais</h2>
+    <p class="lead">O trabalho também aparece nos conteúdos educativos do perfil, que já passaram de milhares de visualizações ensinando treino de verdade, sem fórmula mágica.</p>
+
+    <div class="case">
+      <figure>
+        <!-- Troque "geison.png" pelo nome do print do Geison no repositório -->
+        <img src="geison.png" alt="Print do Instagram mostrando a evolução do aluno Geison Bordini na consultoria online" loading="lazy" onerror="this.hidden=true">
+        <figcaption class="note">@personal_sergiiosouzza · print real</figcaption>
+      </figure>
+      <div>
+        <h3>Evolução do aluno Geison Bordini</h3>
+        <p class="lead">Geison é acompanhado na consultoria online do Sérgio e publicou a própria evolução, antes e depois. É esse tipo de resultado que guia cada plano de treino.</p>
+        <ul class="tags"><li><b>Constância</b> treino acompanhado</li><li><b>Dedicação</b> mesmo no online</li><li><b>Mudança de vida</b> novos hábitos</li></ul>
+      </div>
+    </div>
+
+    <div class="case two" style="margin-top:56px">
+      <figure style="grid-column:1/-1">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <img src="1.png" alt="Evolução da aluna Laura Fernandes, antes e depois (foto 1)" loading="lazy">
+          <img src="2.png" alt="Evolução da aluna Laura Fernandes, antes e depois (foto 2)" loading="lazy">
+        </div>
+      </figure>
+      <div style="grid-column:1/-1">
+        <h3>Evolução da aluna Laura Fernandes</h3>
+        <p class="lead">Laura alcançou o shape que sempre buscou com constância, disciplina e estratégia.</p>
+        <ul class="tags"><li><b>Constância</b> treino acompanhado</li><li><b>Dedicação</b> mesmo no online</li><li><b>Mudança de vida</b> novos hábitos</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mitos">
+  <div class="wrap">
+    <h2>Treino sem achismo</h2>
+    <p class="lead">Alguns dos mitos que o Personal Sérgio desmonta toda semana com o público dele e que também caem por terra no seu treino.</p>
+    <div class="myths">
+      <article class="myth"><small>Mito</small><h3>“Creatina dá pedra no rim”</h3><p>Um dos suplementos mais estudados da musculação segue sendo mal interpretado. O problema não está no suplemento, mas no mau uso por pessoas com problema(s) renal(is) e sem orientação.</p></article>
+      <article class="myth"><small>Mito</small><h3>“Mulher que treina braço fica masculina”</h3><p>Treino de braço deixa o braço forte, não “masculino”. Hipertrofia exagerada exige anos de treino pesado e um contexto hormonal bem específico.</p></article>
+      <article class="myth"><small>Mito</small><h3>“Abdominal seca a barriga”</h3><p>Abdominal fortalece o abdômen. Quem “seca a barriga” é a dieta. Treino certo + alimentação + cardio é a combinação que realmente funciona.</p></article>
+      <article class="myth"><small>Mito</small><h3>“Sem dieta, treinar não adianta”</h3><p>Treinar sem dieta rende menos do que treinar com dieta, mas ainda assim rende muito mais do que ficar parado. O primeiro passo importa.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="plans" id="planos">
+  <div class="wrap">
+    <h2>Escolha seu plano</h2>
+    <p class="lead">Presencial, em dupla ou consultoria online. Valores mensais, sem letra miúda.</p>
+
+    <div class="tabs" role="tablist" aria-label="Tipo de plano">
+      <button role="tab" id="t-ind" aria-selected="false" aria-controls="p-ind">Personal individual</button>
+      <button role="tab" id="t-dup" aria-selected="false" aria-controls="p-dup">Personal em dupla</button>
+      <button role="tab" id="t-onl" aria-selected="true" aria-controls="p-onl">Consultoria online</button>
+    </div>
+
+    <div id="p-ind" role="tabpanel" aria-labelledby="t-ind" hidden>
+      <div class="grid" data-who="individual"></div>
+      <p class="note">Treinos presenciais em Mangaratiba (RJ).</p>
+    </div>
+    <div id="p-dup" role="tabpanel" aria-labelledby="t-dup" hidden>
+      <div class="grid" data-who="em dupla"></div>
+      <p class="note">Você escolhe seu parceiro ou parceira de treino e vocês dividem o valor da tabela.</p>
+    </div>
+    <div id="p-onl" role="tabpanel" aria-labelledby="t-onl">
+      <div class="grid">
+        <div class="plan"><span class="n">Plano Gold</span><span class="p">R$ 150</span><span class="d">1 mês</span><a class="btn btn-line" href="https://wa.me/5521982733914?text=Oi%20S%C3%A9rgio!%20Quero%20a%20consultoria%20online%20-%20Plano%20Gold.">Escolher</a></div>
+        <div class="plan best"><span class="n">Plano Platinum</span><span class="p">3x R$ 110</span><span class="d">3 meses · R$ 330</span><a class="btn btn-gold" href="https://wa.me/5521982733914?text=Oi%20S%C3%A9rgio!%20Quero%20a%20consultoria%20online%20-%20Plano%20Platinum.">Escolher</a></div>
+        <div class="plan"><span class="n">Plano Black</span><span class="p">6x R$ 90</span><span class="d">6 meses · R$ 540</span><a class="btn btn-line" href="https://wa.me/5521982733914?text=Oi%20S%C3%A9rgio!%20Quero%20a%20consultoria%20online%20-%20Plano%20Black.">Escolher</a></div>
+      </div>
+      <p class="note">Treino, ajustes periódicos e acompanhamento direto pelo App MFIT Personal e/ou WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap" style="max-width:780px">
+    <h2>Antes de chamar no WhatsApp</h2>
+    <details><summary>Preciso já ter experiência com treino?</summary><p>Não. Os planos são montados de acordo com o seu nível, de quem nunca pisou numa academia até quem já treina há anos.</p></details>
+    <details><summary>Como funciona a consultoria online?</summary><p>Você recebe seu treino, ajustes periódicos e acompanhamento direto com o Sérgio pelo App MFIT Personal e/ou WhatsApp, sem precisar estar em Mangaratiba.</p></details>
+    <details><summary>Onde acontecem os treinos presenciais?</summary><p>Em Mangaratiba (RJ). O local exato é combinado direto na conversa do WhatsApp.</p></details>
+    <details><summary>Posso treinar em dupla com quem eu quiser?</summary><p>Sim! Você escolhe seu parceiro ou parceira de treino e vocês dividem o valor da tabela em dupla.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Bora pro seu eu do futuro?</h2>
+    <p>Manda uma mensagem agora, conta seu objetivo e receba a orientação certa pra começar.</p>
+    <a class="btn btn-gold" href="https://wa.me/5521982733914?text=Oi%20S%C3%A9rgio!%20Vim%20pelo%20Instagram%20e%20quero%20come%C3%A7ar%20a%20treinar.">Chamar no WhatsApp agora</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo.png" alt="Squad Souzza" loading="lazy">
+    <nav><a href="https://instagram.com/personal_sergiiosouzza">@personal_sergiiosouzza</a><a href="https://linktr.ee/personalsergiio">linktr.ee/personalsergiio</a></nav>
+    <p>© 2026 Sérgio Souza — Personal Trainer<br>CREF 060093/RJ · Rio de Janeiro</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5521982733914?text=Oi%20S%C3%A9rgio!%20Vim%20pelo%20Instagram%20e%20quero%20saber%20mais%20sobre%20os%20planos." aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.2 2 11.5c0 2.2.8 4.200 2.200 5.800L3 22l5-1.900c1 .3 2 .4 3 .4 5.500 0 10-4.200 10-9.500S17.500 2 12 2zm-3.500 5.500h1.200l1 2.500-.8 1c.7 1.400 1.800 2.400 3.200 3l1-.9 2.400 1.100v1.300c-.3.900-1.300 1.400-2.200 1.300C10.800 16.600 7.400 13 7.300 10.300c0-1.400.5-2.300 1.200-2.800z"/></svg>
+</a>
+
+<script>
+/* Monta as tabelas de preço do personal presencial */
+const WA='https://wa.me/5521982733914?text=';
+const tabelas={individual:[[2,380],[3,480],[4,580],[5,680]],'em dupla':[[2,550],[3,650],[4,800],[5,900]]};
+document.querySelectorAll('[data-who]').forEach(g=>{
+  const who=g.dataset.who;
+  g.innerHTML=tabelas[who].map(([x,v])=>`<div class="plan"><span class="n">${x}x na semana</span><span class="p">R$ ${v}<small> /mês</small></span><span class="d">Personal ${who}</span><a class="btn btn-line" href="${WA}${encodeURIComponent('Oi Sérgio! Quero começar o plano '+(who==='individual'?'individual':'em dupla')+' '+x+'x na semana.')}">Escolher</a></div>`).join('');
+});
+/* Logo no topo fixo só aparece depois que a logo grande sai da tela */
+const hdr=document.querySelector('header'),big=document.querySelector('.hero .logo');
+if('IntersectionObserver' in window){new IntersectionObserver(([e])=>hdr.classList.toggle('top',e.isIntersecting),{rootMargin:'-70px 0px 0px 0px'}).observe(big)}else{hdr.classList.remove('top')}
+/* Abas */
+const tabs=[...document.querySelectorAll('[role=tab]')];
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(o=>{const on=o===t;o.setAttribute('aria-selected',on);document.getElementById(o.getAttribute('aria-controls')).hidden=!on;});
+}));
+</script>
+</body>
+</html>
